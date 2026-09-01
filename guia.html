@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de ejercicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Guía de ejercicios</span>
+            <!-- Volver al panel -->
+            <a href="panel.php" class="btn btn-light btn-sm">← Volver al panel</a>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+
+        <div class="alert alert-info">
+            Actividades para modificar el programa del login. Cada ejercicio indica qué modificar,
+            dónde y cómo comprobar que quedó bien.
+        </div>
+
+        <div class="mb-3">
+            <span class="badge bg-success">🟢 Básico</span>
+            <span class="badge bg-warning text-dark">🟡 Intermedio</span>
+            <span class="badge bg-danger">🔴 Avanzado</span>
+        </div>
+
+        <h2 class="h5 mt-4 text-primary">Bloque 1 — Cambios simples</h2>
+        <div class="accordion" id="bloque1">
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ej1">
+                        Ejercicio 1 — Cambiar el título del login <span class="badge bg-success ms-2">🟢</span>
+                    </button>
+                </h3>
+                <div id="ej1" class="accordion-collapse collapse show" data-bs-parent="#bloque1">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>index.php</code> → <code>&lt;title&gt;Iniciar sesión&lt;/title&gt;</code></p>
+                        <p><strong>Qué hacer:</strong> cambiá el título por otro, por ejemplo "Acceso restringido".</p>
+                        <p><strong>Comprobar:</strong> el texto de la pestaña del navegador cambia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej2">
+                        Ejercicio 2 — Cambiar el mensaje de bienvenida <span class="badge bg-success ms-2">🟢</span>
+                    </button>
+                </h3>
+                <div id="ej2" class="accordion-collapse collapse" data-bs-parent="#bloque1">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>panel.php</code> → el <code>&lt;h1&gt;</code> con "Bienvenido, ..."</p>
+                        <p><strong>Qué hacer:</strong> modificá el texto y probá agregar tu nombre al final.</p>
+                        <p><strong>Comprobar:</strong> entrás al panel y ves el nuevo mensaje.</p>
+                        <p><strong>Pregunta:</strong> ¿dónde está el texto que cambia según el usuario?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej3">
+                        Ejercicio 3 — Cambiar el color del botón <span class="badge bg-success ms-2">🟢</span>
+                    </button>
+                </h3>
+                <div id="ej3" class="accordion-collapse collapse" data-bs-parent="#bloque1">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>index.php</code> → <code>class="btn btn-primary"</code> del botón "Entrar".</p>
+                        <p><strong>Qué hacer:</strong> probá otras clases: <code>btn-success</code>, <code>btn-danger</code>, <code>btn-warning</code>.</p>
+                        <p><strong>Comprobar:</strong> el color del botón cambia sin tocar CSS.</p>
+                        <p><strong>Pregunta:</strong> ¿qué otra clase de Bootstrap podés probar?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej4">
+                        Ejercicio 4 — Cambiar el mensaje de error <span class="badge bg-success ms-2">🟢</span>
+                    </button>
+                </h3>
+                <div id="ej4" class="accordion-collapse collapse" data-bs-parent="#bloque1">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>index.php</code> → el <code>div.alert-danger</code> con "Usuario o contraseña incorrectos".</p>
+                        <p><strong>Qué hacer:</strong> cambiá el texto por otro, por ejemplo "Datos inválidos, intente nuevamente".</p>
+                        <p><strong>Comprobar:</strong> ingresá una contraseña incorrecta y mirá el nuevo aviso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej5">
+                        Ejercicio 5 — Cambiar el nombre de la base de datos <span class="badge bg-success ms-2">🟢</span>
+                    </button>
+                </h3>
+                <div id="ej5" class="accordion-collapse collapse" data-bs-parent="#bloque1">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>conexion.php</code> → <code>$db = 'login';</code></p>
+                        <p><strong>Qué hacer:</strong> creá una base nueva en phpMyAdmin (por ejemplo <code>login_prueba</code>), importá <code>usuarios.sql</code> ahí y cambiá el valor.</p>
+                        <p><strong>Comprobar:</strong> el sistema sigue funcionando pero usando la nueva base.</p>
+                        <p><strong>Pregunta:</strong> ¿qué otros valores podés cambiar en ese archivo y para qué sirven?</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="h5 mt-4 text-primary">Bloque 2 — Lógica del login</h2>
+        <div class="accordion" id="bloque2">
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ej6">
+                        Ejercicio 6 — Agregar otro usuario de prueba <span class="badge bg-warning text-dark ms-2">🟡</span>
+                    </button>
+                </h3>
+                <div id="ej6" class="accordion-collapse collapse show" data-bs-parent="#bloque2">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>usuarios.sql</code> (o phpMyAdmin).</p>
+                        <p><strong>Qué hacer:</strong> insertá un nuevo usuario. Para la contraseña, generá su hash:</p>
+                        <pre class="bg-light p-2 rounded"><code>echo password_hash('tuclave', PASSWORD_DEFAULT);</code></pre>
+                        <p><strong>Comprobar:</strong> entrás con el nuevo usuario y el panel muestra su nombre.</p>
+                        <p><strong>Pregunta:</strong> ¿por qué no se puede guardar la contraseña "en claro"?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej7">
+                        Ejercicio 7 — Mostrar la fecha de ingreso <span class="badge bg-warning text-dark ms-2">🟡</span>
+                    </button>
+                </h3>
+                <div id="ej7" class="accordion-collapse collapse" data-bs-parent="#bloque2">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> guardá la fecha al iniciar sesión y mostrala en el panel.</p>
+                        <p>1. En <code>login.php</code>, antes del <code>header</code>:</p>
+                        <pre class="bg-light p-2 rounded"><code>$_SESSION["fecha"] = date("d/m/Y H:i:s");</code></pre>
+                        <p>2. En <code>panel.php</code>, dentro de la tarjeta:</p>
+                        <pre class="bg-light p-2 rounded"><code>&lt;p&gt;Ingresaste el: &lt;?php echo $_SESSION["fecha"]; ?&gt;&lt;/p&gt;</code></pre>
+                        <p><strong>Comprobar:</strong> al entrar, el panel muestra el día y la hora del ingreso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej8">
+                        Ejercicio 8 — Proteger una página nueva <span class="badge bg-warning text-dark ms-2">🟡</span>
+                    </button>
+                </h3>
+                <div id="ej8" class="accordion-collapse collapse" data-bs-parent="#bloque2">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> creá una copia de <code>panel.php</code> llamada <code>perfil.php</code> y linkeala desde el panel (enlace "Mi perfil").</p>
+                        <p><strong>Comprobar:</strong> si entrás sin loguearte a <code>perfil.php</code> te manda al login.</p>
+                        <p><strong>Pregunta:</strong> ¿qué línea del archivo hace esa protección?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej9">
+                        Ejercicio 9 — Evitar que login.php se abra directo <span class="badge bg-warning text-dark ms-2">🟡</span>
+                    </button>
+                </h3>
+                <div id="ej9" class="accordion-collapse collapse" data-bs-parent="#bloque2">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> agregá al inicio de <code>login.php</code>:</p>
+                        <pre class="bg-light p-2 rounded"><code>if (!isset($_POST["usuario"]) || !isset($_POST["clave"])) {
+    header("Location: index.php");
+    exit;
+}</code></pre>
+                        <p><strong>Comprobar:</strong> abrir <code>login.php</code> directo te redirige al formulario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej10">
+                        Ejercicio 10 — Mostrar la lista de usuarios <span class="badge bg-warning text-dark ms-2">🟡</span>
+                    </button>
+                </h3>
+                <div id="ej10" class="accordion-collapse collapse" data-bs-parent="#bloque2">
+                    <div class="accordion-body">
+                        <p><strong>Dónde:</strong> <code>panel.php</code>.</p>
+                        <p><strong>Qué hacer:</strong> agregá una consulta que liste todos los usuarios:</p>
+                        <pre class="bg-light p-2 rounded"><code>require "conexion.php";
+$lista = $conexionbd->query("SELECT id, usuario FROM usuarios");
+foreach ($lista as $u) {
+    echo $u["id"] . " - " . $u["usuario"] . "&lt;br&gt;";
+}</code></pre>
+                        <p><strong>Comprobar:</strong> el panel muestra los usuarios registrados.</p>
+                        <p><strong>Pregunta:</strong> ¿qué pasa si mostramos también la columna <code>clave</code>? ¿por qué es mala idea?</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="h5 mt-4 text-primary">Bloque 3 — Desafíos</h2>
+        <div class="accordion" id="bloque3">
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ej11">
+                        Ejercicio 11 — Formulario de registro <span class="badge bg-danger ms-2">🔴</span>
+                    </button>
+                </h3>
+                <div id="ej11" class="accordion-collapse collapse show" data-bs-parent="#bloque3">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> creá <code>registro.php</code> con un formulario (usuario + contraseña + repetir contraseña) que inserte en la tabla:</p>
+                        <pre class="bg-light p-2 rounded"><code>$hash = password_hash($clave, PASSWORD_DEFAULT);
+$sql = "INSERT INTO usuarios (usuario, clave) VALUES (?, ?)";
+$consulta = $conexionbd->prepare($sql);
+$consulta->execute([$usuario, $hash]);</code></pre>
+                        <p><strong>Agregar:</strong> que verifique que las dos contraseñas coincidan y que el usuario no exista. Linkeá "Registrarse" en <code>index.php</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej12">
+                        Ejercicio 12 — Cambiar la contraseña <span class="badge bg-danger ms-2">🔴</span>
+                    </button>
+                </h3>
+                <div id="ej12" class="accordion-collapse collapse" data-bs-parent="#bloque3">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> creá <code>cambiar_clave.php</code> (protegida con la guardia de sesión) que permita cambiar la clave del usuario logueado:</p>
+                        <pre class="bg-light p-2 rounded"><code>$nueva = password_hash($_POST["nueva"], PASSWORD_DEFAULT);
+$sql = "UPDATE usuarios SET clave = ? WHERE usuario = ?";
+$consulta = $conexionbd->prepare($sql);
+$consulta->execute([$nueva, $_SESSION["usuario"]]);</code></pre>
+                        <p><strong>Comprobar:</strong> cambiás tu contraseña, cerrás sesión y entrás con la nueva.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej13">
+                        Ejercicio 13 — Contar intentos fallidos <span class="badge bg-danger ms-2">🔴</span>
+                    </button>
+                </h3>
+                <div id="ej13" class="accordion-collapse collapse" data-bs-parent="#bloque3">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> en <code>login.php</code>, usá la sesión para contar los intentos:</p>
+                        <pre class="bg-light p-2 rounded"><code>$_SESSION["intentos"] = ($_SESSION["intentos"] ?? 0) + 1;</code></pre>
+                        <p>Mostrá el número en <code>index.php</code> y agregá una condición: si supera 3, mostrá "Cuenta bloqueada".</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej14">
+                        Ejercicio 14 — Inyección SQL en vivo <span class="badge bg-danger ms-2">🔴</span>
+                    </button>
+                </h3>
+                <div id="ej14" class="accordion-collapse collapse" data-bs-parent="#bloque3">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> en el campo "Usuario" escribí: <code>' OR '1'='1</code></p>
+                        <p><strong>Observación:</strong> el sistema <strong>no</strong> deja pasar. Esto ocurre porque la consulta usa un marcador <code>?</code> (consulta preparada).</p>
+                        <p><strong>Desafío:</strong> escribí en un papel cómo sería la consulta si se armaran las variables directamente y por qué sería insegura.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ej15">
+                        Ejercicio 15 — Refactorizar la guardia <span class="badge bg-danger ms-2">🔴</span>
+                    </button>
+                </h3>
+                <div id="ej15" class="accordion-collapse collapse" data-bs-parent="#bloque3">
+                    <div class="accordion-body">
+                        <p><strong>Qué hacer:</strong> creá un archivo <code>proteger.php</code> con la guardia de sesión y reemplazá el bloque de las páginas privadas por <code>require "proteger.php";</code></p>
+                        <p><strong>Comprobar:</strong> todo sigue funcionando igual y el código es más corto y ordenado.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="h5 mt-4 text-primary">Pautas para resolver</h2>
+        <ul>
+            <li>Leé el comentario del código antes de tocarlo: ahí está la pista de qué hace cada parte.</li>
+            <li>Hacé una copia de seguridad antes de modificar (<code>cp archivo.php archivo.php.bak</code>).</li>
+            <li>Probá siempre en el navegador después de cada cambio.</li>
+            <li>Si algo se rompe, revisá el mensaje de error: indica archivo y línea.</li>
+        </ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
